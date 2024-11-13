@@ -11,6 +11,14 @@ body {
     display: grid;
     place-content: center;
     font-family: system-ui, sans-serif;
+    background: linear-gradient(#7bb8d4, #93bdd2, #e1ff5b, #dc3737, rgb(197, 49, 49));
+    animation: gradientAnim 8s ease infinite;
+}
+
+@keyframes gradientAnim{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100%, 50%;}
+    100%{background-position: 0%, 50%;}
 }
 /*Center Everything in section*/
 section {
@@ -53,10 +61,6 @@ section {
     body {
     grid-auto-flow: column;
     }
-}
-
-#cupContainer{
-
 }
 
 #container {
