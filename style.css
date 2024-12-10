@@ -22,6 +22,7 @@ body {
 }
 /*Center Everything in section*/
 section {
+    margin-left:5%;
     min-height: 100vh;
     width: 100%;
     display: flex;

@@ -21,11 +21,55 @@ table, th, td {
 	border: 1px solid black;
 	border-radius: 10px;}
 
-body{	background-color:#d0cbd3 ;
+body{	background-color:#292b39 ;
 		
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 20vw;
+  height: 15vh;
+  overflow: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity .8s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: .75;
 }
 
 #sec-2 {
+  background-image:url(img/background.png);
+}
+#sec-3 {
+  background-image:url(img/background.png);
+}
+#sec-4 {
+  background-image:url(img/background.png);
+}
+#sec-5 {
+  background-image:url(img/background.png);
+}
+#sec-6 {
   background-image:url(img/background.png);
 }
 .scroll-down {
@@ -57,9 +101,9 @@ body{	background-color:#d0cbd3 ;
   animation-delay: 0.3s;
   /* animation: scroll-down 1s ease-in-out infinite; */
 }
-h1{color: black;
+h1{color: rgb(255, 255, 255);
   text-shadow:-15px 5px 20px #292929;}
-h2{color: black;
+h2{color: rgb(255, 255, 255);
   text-shadow:-15px 5px 20px #292929;}
 @keyframes scroll-down {
   0% {
