@@ -58,7 +58,7 @@ body{	background-color:#292b39 ;
 }
 
 #sec-2 {
-  background-image:url(img/background.png);
+  /*background-image:url(img/background.png);*/
 }
 #sec-3 {
   background-image:url(img/background.png);
@@ -120,4 +120,20 @@ h2{color: rgb(255, 255, 255);
     top: 90%;
     opacity: 0;
   }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.block{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
