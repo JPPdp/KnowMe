@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    
+    border-radius: 25%;
+    margin: 50px;
+    background-image: url();
+
+}
+
+.titleLogoContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+
+    background-color: antiquewhite;
+}
+
+.hasFlex{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: flex-end;
+}
+
+.downloadBtn{
+    width: 100%;
+    border-radius: 0 0 20% 20%;
+    padding: 10%;
+}
+
+/*Mobile*/
+@media (max-width:500px) {
+
+    /*Through Wilderness*/
+    h1{
+        color:red;
+    }
+
+    section {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #homePage{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(95, 133, 133);
+        border-radius: 50%;
+    }
+
+}
+
+@media (max-width:800px) {
+    /*Through Wilderness*/
+
+    #gameTitle{
+        max-width: 500px;
+    }
+
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: rgb(176, 247, 23);
+        border-radius: 50%;
+    }
+
+}
+@media (max-width:1200px) {
+    /*Through Wilderness*/
+
+    #gameTitle{
+        max-width: 500px;
+    }
+
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: rgb(255, 128, 0);
+        border-radius: 50%;
+    }
+
+}
+
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Through Wilderness*/
+#gamePage{
+    background-color: aqua;
+    background-image: url('img/img_projects/ttw_pics/game_background.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+}
+#gameTitle{
+    max-width: 1000px;
+    max-height: 100px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: red;*/
+}
