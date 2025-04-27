@@ -1,5 +1,6 @@
 *{
     /*border: 1px solid red;*/
+    border: 1px solid red;
     margin: 0px;
     padding: 0px;
 }
@@ -13,8 +14,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+.rec80{
+    width: 80vw;
+
+}
 .btn_img{
     width: 5vw;
+    min-width: 70px;
+}
+.posright{
+    position: absolute;
+    right: 0px;
 }
 .main_pageBG{
     width: 100vw;
@@ -31,6 +41,7 @@ align-items: center;
 }
 .devTitle{
     width: 25vw;
+    min-width: 280px;
 }
 .main_btn{
     border: 3px solid #454545;
@@ -38,6 +49,8 @@ align-items: center;
     margin-right: 10px;
     height: 3vh;
     width: 8vw;
+    min-width: 90px;
+    min-height: 30px;
     transition: .3s;
 }
 .main_btn:hover{
@@ -50,26 +63,109 @@ align-items: center;
 .imgContainer{
     height: 97vh;
     width: 50vw;
-    
-    
-}
-.imgContainer2{
-    height: 380px;
-    min-width: 250px;
-    width: 20vw;
-    position: absolute;
-    top: 25vh;
-    background-image: url(my_name_dev.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    align-content: center;
 }
 main{
     align-content: center;
 }
 
 .secTwo{
-    background-color: #D9D9D9;
+    background-color: #B9B9B9;
     width: 100vw;
     height: 100vh;
+}
+
+.projects{
+    background-color: aquamarine;
+    background-size: 100vw 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 70vh;
+}
+
+/*==========Test area==========*/
+.PTitle{
+    height: 8vh;
+    min-width: 300px;
+}
+
+.collapsible-wrapper {
+    background-color: #807a7a;
+    overflow: hidden;
+    margin-bottom: 15px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.collapsible-header {
+    padding: 18px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* optional overlay */
+    font-size: 16px;
+    transition: opacity 0.5s,visibility 0.3s ease;
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 18px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+.collapsible-wrapper.active .collapsible-content {
+    opacity: 1;
+    padding: 18px;
+    height: 100vh;
+    max-height: 100vh; /* adjust as needed */
+}
+
+.collapsible-wrapper.active .collapsible-header {
+    opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+
+.tw_app{
+    background-image: url('rcs/Projects/through_wilderness/tw_bg.png'); /* Replace with your actual image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+/*FLex*/
+.flex{display: flex;}
+.row{flex-direction: row;}
+.rowrev{flex-direction: row-reverse; align-items: flex-end;}
+.column{flex-direction: column;}
+.fEnd{align-items: flex-end;}
+.faCenter{align-items: center;}
+.fSpaceB{justify-content: space-between;}
+.fCenter{justify-content: center;}
+.fAround{justify-content: space-around;}
+.logo{width: 50px; height: 50px;}
+.w20{width: 20vw;}
+.h20{height: 20vh;}
+.m20{margin: 20px;}
+.h40{height: 40vh;}
+.w40{width: 40vw;}
+.m40{margin: 40px;}
+.w60{width: 60vw;}
+.h60{height: 60vh;}
+.w80{width: 95vw;}
+.h80{height: 95vh;}
+.hfit{height: fit-content;}
+.min3{min-width: 300px;}
+.max3W{max-width: 400px;}
+.bottom{position: absolute; bottom: 0;}
+.left{position: absolute; left: 0;}
+.blue{background-color: blue;}
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    .main_pageBG{
+        background-image: url(rcs/me_pic.png);
+        background-size: 220vw 90vh;
+        background-position: center;
+    }
+    .min3{
+        min-width: 100px;
+    }
 }
