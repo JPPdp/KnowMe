@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+body{
+    background-color: #0D1117;
+}
+.main{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.main .left{
+    background-color: aliceblue;
+    height: fit-content;
+    width: fit-content;
+    margin: 15px;
+}
+
+.main .right{
+    background-color: aqua;
+    height: fit-content;
+    width: 60vw;
+    margin: 15px;
+}
+
+.left .profile{
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    background-image: url(rcs/4.jpg);
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+    background-size:cover;
+}
+
+.roboto-<uniquifier> {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
