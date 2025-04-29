@@ -1,23 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-test.css">
-    <title>Project: TW</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+<!-- Settings Button -->
+<button id="settingsButton" class="fixed bottom-5 right-5 bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-600 transition duration-300 z-50">
+    ⚙️
+</button>
 
-    <section id="gamePage">
-        <div class="titleLogoContainer">
-            <img id='gameTitle'alt='Title'src="img/img_projects/ttw_pics/game_title_3.png">
-            <div class="logo hasFlex">
-                <button type="button" class="downloadBtn">PLAY NOW!</button>
-            </div>
-        </div>
-        <div class="container">
-            
-        </div>
-    </section>
+<!-- Settings Modal -->
+<div id="settingsModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-80">
+    <h2 class="text-2xl font-bold mb-4">Settings</h2>
     
+    <div class="flex items-center justify-between mb-4">
+        <span>Dark Mode</span>
+        <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="flex items-center justify-between mb-4">
+        <span>Language</span>
+        <select id="languageSelect" class="bg-gray-200 dark:bg-gray-700 rounded p-1">
+        <option value="en">English</option>
+        <option value="ph">Tagalog</option>
+        </select>
+    </div>
+
+    <button id="closeSettings" class="mt-4 bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition">Close</button>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="text-center py-10">
+    <h1 id="name" class="text-4xl font-bold hover:text-indigo-400 transition-colors duration-300">James Patrick Paloyo</h1>
+</header>
+
+<!-- Projects Section -->
+<section id="projects" class="py-10 px-5 md:px-10 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Project Card Example -->
+    <a href="https://your-project-link.com" target="_blank" class="bg-white dark:bg-gray-700 rounded-lg shadow p-5 hover:scale-105 transform transition-transform duration-300">
+        <img src="project-image.jpg" alt="Project Title" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Project Title</h3>
+        <p class="text-sm">Brief description of the project.</p>
+    </a>
+    <!-- Add more project cards as needed -->
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    const settingsButton = document.getElementById('settingsButton');
+    const settingsModal = document.getElementById('settingsModal');
+    const closeSettings = document.getElementById('closeSettings');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const languageSelect = document.getElementById('languageSelect');
+
+    // Open settings modal
+    settingsButton.addEventListener('click', () => {
+    settingsModal.classList.remove('hidden');
+    });
+
+    // Close settings modal
+    closeSettings.addEventListener('click', () => {
+    settingsModal.classList.add('hidden');
+    });
+
+    // Dark Mode Toggle
+    darkModeToggle.addEventListener('change', () => {
+    document.documentElement.classList.toggle('dark');
+    });
+
+    // Language Change
+    languageSelect.addEventListener('change', (e) => {
+    const selectedLanguage = e.target.value;
+    // Implement your language change logic here
+    // For example, you can load different language files or change text content dynamically
+    alert('Language changed to: ' + selectedLanguage);
+    });
+</script>
+
+<!-- Switch Toggle Styles -->
+<style>
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+    }
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    }
+    input:checked + .slider { background-color: #4f46e5; }
+    input:checked + .slider:before { transform: translateX(22px); }
+</style>
 </body>
+</html>

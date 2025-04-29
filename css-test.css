@@ -1,124 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f0f0f;
+    color: #f5f5f5;
+    line-height: 1.6;
 }
 
-.logo {
-    width: 300px;
-    height: 300px;
-    
-    border-radius: 25%;
-    margin: 50px;
-    background-image: url();
-
-}
-
-.titleLogoContainer{
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-
-    background-color: antiquewhite;
-}
-
-.hasFlex{
-    background-color: aqua;
-    display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    justify-content: flex-end;
-}
-
-.downloadBtn{
-    width: 100%;
-    border-radius: 0 0 20% 20%;
-    padding: 10%;
-}
-
-/*Mobile*/
-@media (max-width:500px) {
-
-    /*Through Wilderness*/
-    h1{
-        color:red;
-    }
-
-    section {
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #homePage{
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .box{
-        width: 100px;
-        height: 100px;
-        background-color: rgb(95, 133, 133);
-        border-radius: 50%;
-    }
-
-}
-
-@media (max-width:800px) {
-    /*Through Wilderness*/
-
-    #gameTitle{
-        max-width: 500px;
-    }
-
-    .box{
-        width: 300px;
-        height: 300px;
-        background-color: rgb(176, 247, 23);
-        border-radius: 50%;
-    }
-
-}
-@media (max-width:1200px) {
-    /*Through Wilderness*/
-
-    #gameTitle{
-        max-width: 500px;
-    }
-
-    .box{
-        width: 300px;
-        height: 300px;
-        background-color: rgb(255, 128, 0);
-        border-radius: 50%;
-    }
-
-}
-
-
-section {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*Through Wilderness*/
-#gamePage{
-    background-color: aqua;
-    background-image: url('img/img_projects/ttw_pics/game_background.png');
-    background-size: contain;     
-    background-repeat: no-repeat;
-}
-#gameTitle{
-    max-width: 1000px;
-    max-height: 100px;
-}
-.container{
+.hero {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /*background-color: red;*/
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    padding: 2rem;
+    background: #000;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #4DB8FF;
+}
+.scroll-down {
+    margin-top: 1rem;
+    display: inline-block;
+    color: #4DB8FF;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+.about, .projects, .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.skills img {
+    margin-top: 2rem;
+    width: 90%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.project-card {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(77, 184, 255, 0.3);
+}
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    margin-top: 1rem;
+}
+.contact-links a {
+    color: #4DB8FF;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.contact-links a:hover {
+    color: #00d4ff;
+}
+
+footer {
+    padding: 1rem;
+    background: #000;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
 }
